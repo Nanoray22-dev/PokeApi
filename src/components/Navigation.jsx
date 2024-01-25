@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import { Link, Outlet } from 'react-router-dom'
 import { PokemonContext } from '../context/PokemonContext';
+import pokemon from '../assets/pokemon-logo-black-transparent.png'
 
 export const Navigation = () => {
     const {numero} = useContext(PokemonContext)
@@ -10,7 +11,7 @@ export const Navigation = () => {
         <header className='container'>
             <Link to='/' className='logo'>
                 <img 
-                    src='src/assets/pokemon-logo-black-transparent.png'
+                    src={pokemon}
                     alt='Logo Pokedex' />
             </Link>
             {/* onSubmit={onSearchSubmit} */}
